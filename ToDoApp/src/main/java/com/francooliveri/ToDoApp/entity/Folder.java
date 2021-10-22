@@ -12,11 +12,13 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 
 @Entity
 @Table(name="folder")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Folder {
 
 	@Id
@@ -26,10 +28,11 @@ public class Folder {
 	@Column(nullable = false)
 	private String name;
 	@OneToMany(mappedBy = "folder", cascade = CascadeType.REMOVE, orphanRemoval = true)
-	@JsonManagedReference
+	//@JsonManagedReference
 	private List<ToDo> toDoList = new ArrayList<ToDo>();
 	
 	
+
 	public long getId() {
 		return id;
 	}

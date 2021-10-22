@@ -7,7 +7,6 @@ import com.francooliveri.ToDoApp.entity.ToDo;
 
 @Repository
 public interface ToDoRepository extends CrudRepository<ToDo, Long> {
-	
-	
+
 
 }

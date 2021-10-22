@@ -1,6 +1,7 @@
 package com.francooliveri.ToDoApp.service;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,10 @@ public class FolderService {
 	
 	public ArrayList<Folder> getAllFolders(){
 		return (ArrayList<Folder>) repo.findAll();
+	}
+	
+	public Optional<Folder> getFolderById(long id){
+		return repo.findById(id);
 	}
 	
 	public Folder saveFolder(Folder folder) {
