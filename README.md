@@ -2,7 +2,7 @@
 To-do list excercise
 
 Used in the project:
-MySQL 8.0.27
+MySQL 8.0.27 (user: root / password: rootadmin1234)
 Apache Tomcat 8.5.72
 Java 8
 Spring boot 2.5.6
