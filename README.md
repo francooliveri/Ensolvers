@@ -7,6 +7,10 @@ Apache Tomcat 8.5.72
 Java 8
 Spring boot 2.5.6
 
+USE THE FOLLOWING COMMANDS:
+mysql -u root -p < script.sql
+java -jar ToDoApp/target/ToDoApp-1.0.0-SNAPSHOT.jar
+
 Endpoints:
 
 ToDo tasks:
