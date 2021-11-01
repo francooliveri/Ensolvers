@@ -19,6 +19,7 @@ GET: http://localhost:8080/to-do/{id}
 POST: http://localhost:8080/to-do/{folder_id}
 PUT: http://localhost:8080/to-do/{id}
 DELETE: http://localhost:8080/to-do/{id}
+DELETE: http://localhost:8080/to-do/clear/{folder-id} //elimina las tareas completadas de esa carpeta
 
 JSON:
 {
