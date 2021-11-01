@@ -1,4 +1,3 @@
-import react from "react";
 
 export const DeleteTask = function (props) {
 
@@ -20,7 +19,7 @@ export const DeleteTask = function (props) {
     }
     return (
         <div>            
-            <button onClick={DeleteTask}>Delete task</button>
+            <button className="button" onClick={DeleteTask} className="deleteButton">Delete task</button>
         </div>
 
     )

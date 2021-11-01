@@ -42,9 +42,10 @@ public class FolderController {
 		return this.service.saveFolder(folder);
 	}
 	
-	@PutMapping()
-	public Folder saveFolder(@RequestBody Folder folder) {
-		return this.service.saveFolder(folder);
+	@PutMapping(path = "/{id}")
+	public Folder saveFolder(@PathVariable("id") long id) {
+		Optional<Folder> folder = service.getFolderById(id);
+		return this.service.saveFolder(folder.get());
 	}
 	
 	@DeleteMapping(path = "/{id}")

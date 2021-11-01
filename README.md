@@ -17,7 +17,7 @@ ToDo tasks:
 GET: http://localhost:8080/to-do/
 GET: http://localhost:8080/to-do/{id}
 POST: http://localhost:8080/to-do/{folder_id}
-PUT: http://localhost:8080/to-do/
+PUT: http://localhost:8080/to-do/{id}
 DELETE: http://localhost:8080/to-do/{id}
 
 JSON:
@@ -32,7 +32,7 @@ Folders:
 GET: http://localhost:8080/folders/
 GET: http://localhost:8080/folders/{id}
 POST: http://localhost:8080/folders/
-PUT: http://localhost:8080/folders/
+PUT: http://localhost:8080/folders/{id}
 DELETE: http://localhost:8080/folders/{id}
 
 JSON:

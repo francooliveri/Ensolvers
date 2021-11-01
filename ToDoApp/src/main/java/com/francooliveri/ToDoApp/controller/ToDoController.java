@@ -33,6 +33,11 @@ public class ToDoController {
 		return service.getAllToDos();
 	}
 	
+	@GetMapping(path = "/folder/{id}")
+	public ArrayList<ToDo> getToDosByFolderId(@PathVariable("id") long folderId){
+		return service.getToDosByFolderId(folderId);
+	}
+	
 	@GetMapping(path = "/{id}")
 	public Optional<ToDo> getToDoById(@PathVariable("id") long id) {
 		return service.getToDoById(id);
@@ -43,9 +48,10 @@ public class ToDoController {
 		return this.service.saveToDo(task, folderId);
 	}
 	
-	@PutMapping()
-	public ToDo updateToDo(@RequestBody ToDo task) {
-		return this.service.updateToDo(task);
+	@PutMapping(path = "/{id}")
+	public ToDo updateToDo(@PathVariable("id") long id) {
+		Optional<ToDo> task = service.getToDoById(id);
+		return this.service.updateToDo(task.get());
 	}
 	
 	@DeleteMapping(path = "/{id}")
@@ -59,6 +65,11 @@ public class ToDoController {
 			return "No se elimino el registro";
 		}
 		
+	}
+	
+	@DeleteMapping(path = "/clear/{id}")
+	public ArrayList<ToDo> deleteCompletedToDosByFolderId(@PathVariable("id") long id){
+		return service.deleteCompletedToDosByFolderId(id);
 	}
 	
 }

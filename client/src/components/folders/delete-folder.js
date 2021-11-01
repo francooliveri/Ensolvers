@@ -1,5 +1,3 @@
-import react from "react";
-
 export const DeleteFolder = function (props) {
 
     const folderId = props.id;
@@ -20,7 +18,7 @@ export const DeleteFolder = function (props) {
     }
     return (
         <div>            
-            <button onClick={DeleteFolder}>Delete Folder</button>
+            <button onClick={DeleteFolder} className="deleteButton">Delete Folder</button>
         </div>
 
     )

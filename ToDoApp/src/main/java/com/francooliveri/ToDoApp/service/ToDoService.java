@@ -23,6 +23,28 @@ public class ToDoService {
 	public ArrayList<ToDo> getAllToDos() {
 		return (ArrayList<ToDo>) repo.findAll();
 	}
+	
+	public ArrayList<ToDo> getToDosByFolderId(long folderId){
+		Optional<Folder> opt = fRepo.findById(folderId);
+		Folder folder = opt.isPresent() ? opt.get() : null;
+		ArrayList <ToDo> todoList = new ArrayList<ToDo>();
+		for (ToDo toDo : folder.getToDoList()) {
+			todoList.add(toDo);
+		}
+		return todoList;
+	}
+	
+	public ArrayList<ToDo> deleteCompletedToDosByFolderId(long folderId){
+		Optional<Folder> opt = fRepo.findById(folderId);
+		Folder folder = opt.isPresent() ? opt.get() : null;
+		ArrayList <ToDo> todoList = new ArrayList<ToDo>();
+		for (ToDo toDo : folder.getToDoList()) {
+			if(toDo.isChecked()) {
+				repo.delete(toDo);
+			}
+		}
+		return todoList;
+	}
 
 	public Optional<ToDo> getToDoById(Long id) {
 		return repo.findById(id);

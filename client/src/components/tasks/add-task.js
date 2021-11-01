@@ -18,8 +18,7 @@ export const AddTask = function(props){
           }
     }
     function SaveTask(){
-        //fetch("http://localhost:8080/to-do/3");
-        const resp = fetch("http://localhost:8080/to-do/3",requestInit);
+        const resp = fetch("http://localhost:8080/to-do/" + props.folder_id,requestInit);
         const savedTaskId = JSON.stringify(resp);
         console.log(savedTaskId);
         props.AddToList({description});
@@ -27,7 +26,7 @@ export const AddTask = function(props){
     return( 
         <div>
             <input onChange={onInputChange} />
-            <button onClick={SaveTask}>Add task</button>
+            <button className="button"onClick={SaveTask}>Add task</button>
         </div>);
 }
 
