@@ -28,6 +28,23 @@
     background-color: #dfad3a;
   }
 
+  .addButton {
+    background-color: #22aacc; 
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.2s;
+  }
+
+  .addButton:hover{
+    background-color: #19bbe4;
+  }
+
   .deleteButton {
     background-color: #9c301d; 
     border: none;

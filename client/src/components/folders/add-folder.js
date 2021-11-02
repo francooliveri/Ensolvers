@@ -26,7 +26,7 @@ export const AddFolder = function(props){
     return( 
         <div>
             <input onChange={onInputChange} requiredTxt/>
-            <button onClick={SaveFolder}>Add Folder</button>
+            <button onClick={SaveFolder} className="addButton">Add Folder</button>
         </div>);
 }
 

@@ -10,7 +10,7 @@ let requestInit = {
 }
 function ClearTasks() {
     const resp = fetch("http://localhost:8080/to-do/clear/" + props.folder_id, requestInit)
-    .then(window.location.reload(false));
+    //.then(window.location.reload(false));
     
 }
 

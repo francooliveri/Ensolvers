@@ -19,15 +19,6 @@ function TaskList() {
             .then(function (list) { setTaskList(list) });
     }, setTaskList)
 
-    /*
-    const [taskList, setTaskList] = useState([]); //hook - renderiza cada vez que taskList se actualice
-    useEffect(function () {           //cuando se ejecute un cambio en taskList se ejecuta la funcion
-        fetch("http://localhost:8080/to-do/") //Esta es la peticion REST, buscar POST, PUT, etc.
-            .then(function (response) { return response.json(); })
-            .then(function (list) { setTaskList(list); });
-    }, [setTaskList])
-    */
-
     //promesa: el fetch es la promesa que pide al back, el .then hace que espere sincronicamente la respuesta
     //para continuar con el flujo 
 

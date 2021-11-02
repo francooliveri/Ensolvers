@@ -16,7 +16,6 @@ export const FolderContainer = function ({ id, name }) {
             <span> - </span>
             <span className="description">{name}</span>
             <Link to={"/to-do/" + id} className="link" folder_id={id}>View</Link>
-            <a href="#" className="link">Edit</a>
             <DeleteFolder id={id}>Delete</DeleteFolder>
         </div>);
 

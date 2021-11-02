@@ -26,7 +26,7 @@ export const AddTask = function(props){
     return( 
         <div>
             <input onChange={onInputChange} />
-            <button className="button"onClick={SaveTask}>Add task</button>
+            <button className="addButton"onClick={SaveTask}>Add task</button>
         </div>);
 }
 

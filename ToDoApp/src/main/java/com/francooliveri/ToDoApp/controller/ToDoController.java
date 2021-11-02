@@ -49,8 +49,8 @@ public class ToDoController {
 	}
 	
 	@PutMapping(path = "/{id}")
-	public ToDo updateToDo(@PathVariable("id") long id) {
-		Optional<ToDo> task = service.getToDoById(id);
+	public ToDo updateToDo(@RequestBody Optional<ToDo> task, @PathVariable("id") long id) {
+		//task = service.getToDoById(id);
 		return this.service.updateToDo(task.get());
 	}
 	

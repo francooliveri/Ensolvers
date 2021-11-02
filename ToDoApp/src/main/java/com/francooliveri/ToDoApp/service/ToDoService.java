@@ -62,6 +62,8 @@ public class ToDoService {
 	}
 
 	public ToDo updateToDo(ToDo task) {
+		Optional<ToDo> todo = repo.findById(task.getId());
+		task.setFolder(todo.get().getFolder());
 		return repo.save(task);
 	}
 
